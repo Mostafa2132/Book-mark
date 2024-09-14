@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title> Book Mark </title>
+    <link rel="shortcut icon" href="./imgs/bookfav.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container ">
+        <div class="row ">
+            <div class="inner  mx-auto  ">
+                <h1 class=" lead">Bookmarker</h1>
+                <div class="bord position-relative top-100"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <section class="py-5 text-center main">
+
+
+        <div class="container py-5 ">
+            <div class="row   mt-5">
+
+                <h2 class="fw-bolder"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+            </div>
+
+
+
+        </div>
+        <div class="container py-5 forminp text-center ">
+            <div class="mb-3 text-start ">
+                <label for="NameInput" class="form-label fs-5 fw-bold"> <i
+                        class=" mx-2 fs-4  fa-solid fa-book-bookmark"></i> Site Name</label>
+                <input oninput=vlidate(this) type="text" class="form-control  form-control-lg" id="NameInput"
+                    placeholder="Book Mark Name">
+                <div id="errorbtn" class="  alert text-danger p-1   mt-1 d-none  "> <i
+                        class="fa-solid fa-circle-exclamation"></i>
+                    Please enter letters at lest 3 letter</div>
+            </div>
+            <div class="mb-3 text-start">
+                <label for="URLInput" class="form-label fs-5 fw-bold "> <i
+                        class=" mx-2 fs-4 fa-solid fa-link-slash"></i> Site URL </label>
+                <input oninput=vlidate(this) type="url" class="form-control form-control-lg" id="URLInput"
+                    placeholder="Website URL">
+                <div id="errorbtn" class="  alert text-danger p-1   mt-1 d-none  "> <i
+                        class="fa-solid fa-circle-exclamation"></i>
+                    Please enter a valid url</div>
+            </div>
+
+            <button onclick="addbook()" id="btn" class="btn  my-3 text-center px-5 mx-auto"> Submit </button>
+
+            <div class="bord position-relative top-100 pt-3"></div>
+
+        </div>
+
+        <div class="container  ">
+
+            <table class="table table-light align-middle">
+                <thead>
+                    <tr>
+                        <th class=" fs-5 " scope="col">index</th>
+                        <th class=" fs-5 " scope="col">Website Name</th>
+                        <th class=" fs-5 " scope="col">Visit</th>
+                        <th class=" fs-5 " scope="col">Delete</th>
+
+                    </tr>
+                </thead>
+                <tbody id="inner">
+
+                </tbody>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
